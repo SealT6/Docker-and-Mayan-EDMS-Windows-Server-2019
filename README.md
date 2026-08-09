@@ -11,7 +11,6 @@ If you're experiencing rendering issues on GitHub:
 
 1. **Download the PDF directly:**
    - Click the PDF file name above and select "Download"
-   - Or use this direct link: https://github.com/SealT6/Docker-and-Mayan-EDMS-Windows-Server-2019/raw/main/Redding_Sean_Docker-and-Mayan-EDMS-Windows-Server-2019.pdf
 
 2. **View on your device:**
    - Use Adobe Reader, Preview (Mac), or any PDF viewer
