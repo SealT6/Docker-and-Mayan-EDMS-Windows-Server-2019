@@ -21,8 +21,6 @@ If you're experiencing rendering issues on GitHub:
    - Then open the PDF locally
 
 ## 📋 Quick Links
-
-- 📖 **Full Documentation**: [Download PDF](https://github.com/SealT6/Docker-and-Mayan-EDMS-Windows-Server-2019/raw/main/Redding_Sean_Docker-and-Mayan-EDMS-Windows-Server-2019.pdf)
 - 🐳 **Docker** - Container platform for application deployment
 - 📁 **Mayan EDMS** - Electronic Document Management System
 - 🖥️ **Windows Server 2019** - Enterprise operating system
@@ -50,7 +48,3 @@ Refer to the PDF documentation for:
 ## 📧 Support
 
 For questions about this guide, please refer to the documentation PDF or open an issue in this repository.
-
----
-
-**Note:** If the PDF viewer shows "unable to render code block," please download the PDF file directly and view it with a standalone PDF reader application.
