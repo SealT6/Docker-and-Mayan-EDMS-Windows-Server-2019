@@ -5,10 +5,7 @@ A comprehensive guide for deploying and configuring Docker with Mayan EDMS on Wi
 ## 📄 Documentation
 
 The complete documentation is available in the PDF file:
-
-**[Redding_Sean_Docker-and-Mayan-EDMS-Windows-Server-2019.pdf](./Redding_Sean_Docker-and-Mayan-EDMS-Windows-Server-2019.pdf)**
-
-### How to Access the PDF
+**[Redding_Sean_Docker-and-Mayan-EDMS-Windows-Server-2019.pdf](https://github.com/user-attachments/files/30875364/Redding_Sean_Docker-and-Mayan-EDMS-Windows-Server-2019.pdf)**
 
 If you're experiencing rendering issues on GitHub:
 
