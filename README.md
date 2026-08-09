@@ -1,50 +1,62 @@
-# Docker and Mayan EDMS on Windows Server 2019
+# Docker + Mayan EDMS on Windows Server 2019
 
-A comprehensive guide for deploying and configuring Docker with Mayan EDMS on Windows Server 2019.
+A concise, practical guide for deploying Mayan EDMS with Docker on Windows Server 2019.
 
-## 📄 Documentation
+Status
+- The full guide is provided as a PDF. The PDF was removed from the repository due to file size and is available for direct download.
+- Download the PDF: [Download the full PDF guide](https://github.com/SealT6/Docker-and-Mayan-EDMS-Windows-Server-2019/raw/main/Redding_Sean_Docker-and-Mayan-EDMS-Windows-Server-2019.pdf)
 
-The complete documentation is available in the PDF file:
-**[Redding_Sean_Docker-and-Mayan-EDMS-Windows-Server-2019.pdf](https://github.com/user-attachments/files/30875364/Redding_Sean_Docker-and-Mayan-EDMS-Windows-Server-2019.pdf)**
+Quick links
+- Full documentation (PDF): https://github.com/SealT6/Docker-and-Mayan-EDMS-Windows-Server-2019/raw/main/Redding_Sean_Docker-and-Mayan-EDMS-Windows-Server-2019.pdf
+- Docker: https://www.docker.com/
+- Mayan EDMS: https://www.mayan-edms.com/
+- Windows Server 2019: https://www.microsoft.com/windows-server
 
-If you're experiencing rendering issues on GitHub:
+Overview
+This repository accompanies a step-by-step installation and configuration guide for running Mayan EDMS in Docker containers on Windows Server 2019. The PDF contains complete instructions, architecture notes, configuration examples, and troubleshooting tips.
 
-1. **Download the PDF directly:**
-   - Click the PDF file name above and select "Download"
+What’s in this repo
+- README.md — Overview and quick-start information
+- (PDF removed from repo; download via the link above)
 
-2. **View on your device:**
-   - Use Adobe Reader, Preview (Mac), or any PDF viewer
-   - Open with your preferred browser's PDF viewer
+Quick start (high level)
+1. Prepare Windows Server 2019
+   - Ensure Windows Server 2019 is up to date.
+   - Enable required features and install OS-level dependencies.
+2. Install Docker
+   - Install Docker Desktop or Docker Engine compatible with Windows Server 2019.
+   - Configure Docker to use Linux containers (recommended for Mayan EDMS).
+3. Download the PDF guide
+   - Use the link above to download the full PDF for step-by-step commands and configuration files.
+4. Follow the instructions in the PDF
+   - The PDF includes Docker Compose examples, environment variables, volume mappings, backup/restore procedures, and recommended security settings.
 
-3. **Access via alternative methods:**
-   - Clone the repository: `git clone https://github.com/SealT6/Docker-and-Mayan-EDMS-Windows-Server-2019.git`
-   - Then open the PDF locally
+Highlights included in the PDF
+- Full Docker Compose example for Mayan EDMS and required services (PostgreSQL, Redis, storage)
+- Environment variable reference and secure-secret recommendations
+- Volumes and backup instructions for persistent storage
+- Windows Server-specific notes and common issues
+- Post-deploy checks and verification steps
 
-## 📋 Quick Links
-- 🐳 **Docker** - Container platform for application deployment
-- 📁 **Mayan EDMS** - Electronic Document Management System
-- 🖥️ **Windows Server 2019** - Enterprise operating system
+System requirements
+- Windows Server 2019 (latest updates recommended)
+- Docker compatible with Windows Server 2019 (ensure Linux containers support)
+- Recommended hardware and storage specifications are listed in the PDF
 
-## 🚀 Getting Started
+Troubleshooting
+- If a browser cannot render the PDF, download it and open with a standalone reader (Adobe Reader, Preview on macOS, or a modern browser).
+- For Docker-specific errors, ensure Docker Engine is running and required ports are free.
+- See the PDF for a troubleshooting checklist and common error messages.
 
-For detailed setup and installation instructions, please refer to the complete PDF documentation included in this repository.
+Contributing
+- Open an issue to report bugs or request improvements.
+- Submit pull requests for content changes with a clear description of the change.
 
-## 📝 Project Contents
+Support
+- For questions about the guide, open an issue in this repository and include relevant logs and configuration files.
 
-This repository contains:
-- Complete installation and configuration guide (PDF)
-- Docker setup procedures
-- Mayan EDMS deployment instructions
-- Windows Server 2019 configuration details
+License
+- Add a LICENSE file to state the project's license (e.g., MIT).
 
-## ⚙️ System Requirements
-
-Refer to the PDF documentation for:
-- Windows Server 2019 specifications
-- Docker Desktop/Server requirements
-- Hardware recommendations
-- Software dependencies
-
-## 📧 Support
-
-For questions about this guide, please refer to the documentation PDF or open an issue in this repository.
+Changelog
+- 2026-08-09 — README rewritten and clarified; PDF hosted externally and linked from README.
