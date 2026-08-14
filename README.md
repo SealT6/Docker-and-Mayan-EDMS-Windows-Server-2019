@@ -94,7 +94,6 @@ wget -qO- https://get.docker.com/ | sh
 
 The installation was verified from the Linux terminal.
 <img width="720" height="455" alt="03-docker-compose-launch" src="https://github.com/user-attachments/assets/9d8e9b7a-bac3-4685-a316-cca5994f0b55" />
-<img width="715" height="465" alt="02-docker-install" src="https://github.com/user-attachments/assets/95be7457-2068-4506-bf31-679f589f2f20" />
 
 
 
@@ -121,6 +120,7 @@ curl https://gitlab.com/mayan-edms/mayan-edms/-/raw/master/docker/.env -O
 ```
 
 These files provide the configuration required to deploy the Mayan EDMS container environment.
+<img width="715" height="465" alt="02-docker-install" src="https://github.com/user-attachments/assets/95be7457-2068-4506-bf31-679f589f2f20" />
 
 ---
 
