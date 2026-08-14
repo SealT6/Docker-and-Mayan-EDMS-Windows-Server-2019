@@ -1,62 +1,292 @@
-# Docker + Mayan EDMS on Windows Server 2019
+# 🐳 Docker + Mayan EDMS | Windows Server 2019 Lab Environment
 
-A concise, practical guide for deploying Mayan EDMS with Docker on Windows Server 2019.
+## 📌 Project Overview
 
-Status
-- The full guide is provided as a PDF. The PDF was removed from the repository due to file size and is available for direct download.
-- Download the PDF: [Download the full PDF guide](https://github.com/SealT6/Docker-and-Mayan-EDMS-Windows-Server-2019/raw/main/Redding_Sean_Docker-and-Mayan-EDMS-Windows-Server-2019.pdf)
+This project documents the deployment of **Mayan EDMS (Electronic Document Management System)** using **Docker Compose** within a virtualized lab environment associated with my Windows Server 2019 infrastructure work.
 
-Quick links
-- Full documentation (PDF): https://github.com/SealT6/Docker-and-Mayan-EDMS-Windows-Server-2019/raw/main/Redding_Sean_Docker-and-Mayan-EDMS-Windows-Server-2019.pdf
-- Docker: https://www.docker.com/
-- Mayan EDMS: https://www.mayan-edms.com/
-- Windows Server 2019: https://www.microsoft.com/windows-server
+The project demonstrates practical experience with:
 
-Overview
-This repository accompanies a step-by-step installation and configuration guide for running Mayan EDMS in Docker containers on Windows Server 2019. The PDF contains complete instructions, architecture notes, configuration examples, and troubleshooting tips.
+* Virtualized lab environments
+* Linux administration
+* Docker installation and container management
+* Docker Compose
+* Application deployment
+* Web-based application validation
+* Document management infrastructure
+* Security-relevant document integrity features
 
-What’s in this repo
-- README.md — Overview and quick-start information
-- (PDF removed from repo; download via the link above)
+> **Environment Note:** The screenshots in this project show the Docker/Mayan EDMS workload running inside an Ubuntu virtual machine managed through the lab virtualization environment. The project is part of my broader Windows Server 2019 infrastructure portfolio.
 
-Quick start (high level)
-1. Prepare Windows Server 2019
-   - Ensure Windows Server 2019 is up to date.
-   - Enable required features and install OS-level dependencies.
-2. Install Docker
-   - Install Docker Desktop or Docker Engine compatible with Windows Server 2019.
-   - Configure Docker to use Linux containers (recommended for Mayan EDMS).
-3. Download the PDF guide
-   - Use the link above to download the full PDF for step-by-step commands and configuration files.
-4. Follow the instructions in the PDF
-   - The PDF includes Docker Compose examples, environment variables, volume mappings, backup/restore procedures, and recommended security settings.
+---
 
-Highlights included in the PDF
-- Full Docker Compose example for Mayan EDMS and required services (PostgreSQL, Redis, storage)
-- Environment variable reference and secure-secret recommendations
-- Volumes and backup instructions for persistent storage
-- Windows Server-specific notes and common issues
-- Post-deploy checks and verification steps
+## 🎯 Objectives
 
-System requirements
-- Windows Server 2019 (latest updates recommended)
-- Docker compatible with Windows Server 2019 (ensure Linux containers support)
-- Recommended hardware and storage specifications are listed in the PDF
+* Prepare a virtualized environment for application deployment
+* Install Docker
+* Obtain the Mayan EDMS Docker Compose configuration
+* Deploy Mayan EDMS and its supporting containers
+* Validate the deployment through a web browser
+* Log in to the Mayan EDMS administrative interface
+* Evaluate security-relevant document management capabilities
 
-Troubleshooting
-- If a browser cannot render the PDF, download it and open with a standalone reader (Adobe Reader, Preview on macOS, or a modern browser).
-- For Docker-specific errors, ensure Docker Engine is running and required ports are free.
-- See the PDF for a troubleshooting checklist and common error messages.
+---
 
-Contributing
-- Open an issue to report bugs or request improvements.
-- Submit pull requests for content changes with a clear description of the change.
+## 🧰 Technologies & Tools
 
-Support
-- For questions about the guide, open an issue in this repository and include relevant logs and configuration files.
+| Technology              | Purpose                                          |
+| ----------------------- | ------------------------------------------------ |
+| **Windows Server 2019** | Infrastructure/lab environment                   |
+| **Ubuntu Linux**        | Docker host shown in deployment screenshots      |
+| **Docker**              | Container platform                               |
+| **Docker Compose**      | Multi-container application deployment           |
+| **Mayan EDMS**          | Electronic Document Management System            |
+| **Virtualization**      | Lab environment and VM management                |
+| **Firefox**             | Web-based application validation                 |
+| **cURL / wget**         | Downloading installation and configuration files |
 
-License
-- Add a LICENSE file to state the project's license (e.g., MIT).
+---
 
-Changelog
-- 2026-08-09 — README rewritten and clarified; PDF hosted externally and linked from README.
+## 🏗️ Environment
+
+The deployment was performed in a virtualized lab environment.
+
+### High-Level Architecture
+
+```text
+Windows Server 2019 Lab Environment
+            │
+            ▼
+      Virtualized Linux VM
+            │
+            ▼
+         Docker
+            │
+            ▼
+     Docker Compose
+            │
+            ▼
+        Mayan EDMS
+            │
+            ▼
+     Web Browser / HTTP
+```
+
+---
+
+## 🔧 Deployment Process
+
+### 1. Prepare the Environment
+
+The first stage was preparing the Linux virtual machine for the Mayan EDMS deployment.
+
+![Virtualized Lab Environment](assets/01-environment.png)
+
+---
+
+### 2. Install Docker
+
+Docker was installed using the documented installation command:
+
+```bash
+wget -qO- https://get.docker.com/ | sh
+```
+
+The installation was verified from the Linux terminal.
+
+![Docker Installation](assets/02-docker-install.png)
+
+---
+
+### 3. Obtain the Mayan EDMS Docker Compose Files
+
+The Mayan EDMS Docker Compose configuration and environment file were downloaded using `curl`.
+
+If `curl` is not installed, it can be installed with:
+
+```bash
+sudo apt install curl
+```
+
+The project documentation used:
+
+```bash
+curl https://gitlab.com/mayan-edms/mayan-edms/-/raw/master/docker/docker-compose.yml -O
+```
+
+```bash
+curl https://gitlab.com/mayan-edms/mayan-edms/-/raw/master/docker/.env -O
+```
+
+These files provide the configuration required to deploy the Mayan EDMS container environment.
+
+---
+
+### 4. Deploy Mayan EDMS with Docker Compose
+
+The Mayan EDMS environment was launched using Docker Compose:
+
+```bash
+sudo docker compose up --detach
+```
+
+The terminal output was monitored to verify that the required images were pulled and the containers were created and started.
+
+![Docker Compose Deployment](assets/03-docker-compose-launch.png)
+
+---
+
+## ✅ Deployment Validation
+
+After the containers were started, the Mayan EDMS web interface was accessed through the local machine:
+
+```text
+http://localhost/
+```
+
+The successful web interface confirmed that the application was running and accessible from the host environment.
+
+![Mayan EDMS Web Interface](assets/04-mayan-edms-web-ui.png)
+
+---
+
+## 🔐 Administrative Access
+
+The deployment generated administrative credentials that were used to access the Mayan EDMS interface.
+
+![Mayan EDMS Dashboard](assets/05-mayan-edms-dashboard.png)
+
+The dashboard provided access to core document management functionality and confirmed successful application deployment.
+
+---
+
+## 🔒 Security-Relevant Features
+
+Although this project primarily focused on deployment and infrastructure configuration, Mayan EDMS provides several capabilities that are relevant to secure document management.
+
+### Document Versioning
+
+Mayan EDMS assigns versions to documents as they are uploaded or modified. Version history can help maintain an auditable record of document changes and reduce the risk of losing previous versions.
+
+### Digital Signatures
+
+Mayan EDMS supports digital signatures for document authenticity and integrity. A digital signature can provide an indication that a signed document has been altered after signing.
+
+### Workflow Automation
+
+The platform includes workflow functionality that can help organizations standardize document-processing activities.
+
+### Metadata Extraction & OCR
+
+Mayan EDMS supports automatic metadata extraction and OCR processing. OCR converts text contained in document images into machine-readable text, which can improve document searchability and reduce manual data entry.
+
+---
+
+## 🧪 Validation Performed
+
+| Test                         | Result                       |
+| ---------------------------- | ---------------------------- |
+| Docker installation          | ✅ Successful                 |
+| Docker Compose configuration | ✅ Downloaded                 |
+| Docker Compose deployment    | ✅ Containers created/started |
+| Mayan EDMS web interface     | ✅ Accessible                 |
+| Administrative login         | ✅ Successful                 |
+| Mayan EDMS dashboard         | ✅ Verified                   |
+
+---
+
+## 🛡️ Security Considerations & Future Improvements
+
+The deployment demonstrates application installation and validation, but a production deployment would require additional security controls.
+
+Potential next steps include:
+
+* [ ] Replace HTTP with HTTPS/TLS
+* [ ] Implement a reverse proxy
+* [ ] Restrict exposed network ports
+* [ ] Apply least-privilege access controls
+* [ ] Secure and rotate application credentials
+* [ ] Protect Docker configuration and environment files
+* [ ] Implement regular backups
+* [ ] Establish a patching/update process
+* [ ] Monitor container and application logs
+* [ ] Perform a vulnerability assessment against the deployment
+* [ ] Document recovery procedures
+
+These improvements would extend the project from a deployment lab into a more complete **secure application infrastructure project**.
+
+---
+
+## 📚 Skills Demonstrated
+
+### Infrastructure
+
+* Virtual machine administration
+* Linux administration
+* Windows Server infrastructure
+* Application deployment
+
+### Containerization
+
+* Docker installation
+* Docker Compose
+* Container lifecycle management
+* Multi-container application deployment
+
+### Cybersecurity
+
+* Secure document management concepts
+* Document integrity
+* Digital signatures
+* Version control
+* Security hardening considerations
+
+### Troubleshooting
+
+* Package/dependency troubleshooting
+* Command-line administration
+* Application validation
+* Container deployment verification
+
+---
+
+## 💡 What I Learned
+
+This project provided hands-on experience deploying a multi-container application rather than simply installing a standalone application. I learned how Docker and Docker Compose can simplify application deployment and how a web-based application can be validated after its supporting containers are initialized.
+
+The project also demonstrated how document-management platforms can incorporate security-relevant capabilities such as document versioning and digital signatures. These features are particularly important when managing documents that require integrity, traceability, and controlled workflows.
+
+---
+
+## 🚀 Future Expansion
+
+I plan to build on this project by applying additional security controls and incorporating it into a broader cybersecurity lab.
+
+Potential future work includes:
+
+1. Place Mayan EDMS behind a TLS-enabled reverse proxy.
+2. Implement network segmentation and firewall restrictions.
+3. Perform a Nessus vulnerability assessment.
+4. Monitor Docker and application logs with a SIEM such as Splunk.
+5. Document identified vulnerabilities and remediation steps.
+6. Create backup and recovery procedures.
+7. Perform post-hardening validation.
+
+---
+
+## 📁 Project Evidence
+
+The screenshots included in this repository document the deployment from initial environment preparation through successful Mayan EDMS access.
+
+**Project progression:**
+
+`Virtual Lab → Docker Installation → Docker Compose Deployment → Web Validation → Mayan EDMS Dashboard`
+
+---
+
+## 👤 Author
+
+**Sean Redding**
+
+Cybersecurity | Security Operations | Vulnerability Management | Security Engineering
+
+[GitHub](https://github.com/SealT6) • [LinkedIn](https://www.linkedin.com/in/sean-redding-aa503a293/)
