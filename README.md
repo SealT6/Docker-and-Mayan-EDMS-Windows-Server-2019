@@ -79,7 +79,8 @@ Windows Server 2019 Lab Environment
 
 The first stage was preparing the Linux virtual machine for the Mayan EDMS deployment.
 
-![Virtualized Lab Environment](assets/01-environment.png)
+<img width="640" height="420" alt="01-environment" src="https://github.com/user-attachments/assets/4ab3d272-3165-4738-a884-93b453f872ba" />
+
 
 ---
 
@@ -92,8 +93,10 @@ wget -qO- https://get.docker.com/ | sh
 ```
 
 The installation was verified from the Linux terminal.
+<img width="720" height="455" alt="03-docker-compose-launch" src="https://github.com/user-attachments/assets/9d8e9b7a-bac3-4685-a316-cca5994f0b55" />
+<img width="715" height="465" alt="02-docker-install" src="https://github.com/user-attachments/assets/95be7457-2068-4506-bf31-679f589f2f20" />
 
-![Docker Installation](assets/02-docker-install.png)
+
 
 ---
 
@@ -131,7 +134,8 @@ sudo docker compose up --detach
 
 The terminal output was monitored to verify that the required images were pulled and the containers were created and started.
 
-![Docker Compose Deployment](assets/03-docker-compose-launch.png)
+<img width="720" height="455" alt="03-docker-compose-launch" src="https://github.com/user-attachments/assets/899212a8-5e44-499d-88d4-eb1e91437c66" />
+
 
 ---
 
@@ -145,7 +149,8 @@ http://localhost/
 
 The successful web interface confirmed that the application was running and accessible from the host environment.
 
-![Mayan EDMS Web Interface](assets/04-mayan-edms-web-ui.png)
+<img width="650" height="405" alt="04-mayan-edms-web-ui" src="https://github.com/user-attachments/assets/aca4a1c4-26a9-4141-ae6e-9957dc30018a" />
+
 
 ---
 
@@ -153,7 +158,8 @@ The successful web interface confirmed that the application was running and acce
 
 The deployment generated administrative credentials that were used to access the Mayan EDMS interface.
 
-![Mayan EDMS Dashboard](assets/05-mayan-edms-dashboard.png)
+<img width="640" height="370" alt="05-mayan-edms-dashboard" src="https://github.com/user-attachments/assets/2c71b403-9ed1-46b8-beff-e7fba98652db" />
+
 
 The dashboard provided access to core document management functionality and confirmed successful application deployment.
 
